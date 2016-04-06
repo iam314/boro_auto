@@ -1,0 +1,42 @@
+.backgroundred {
+  background-color: #ED1C24; }
+
+h1 {
+  color: #F2F2F2;
+  margin-top: 0;
+  padding-top: 5rem;
+  padding-left: 15px;
+  text-align: left;
+  margin-bottom: 2rem; }
+
+.underline {
+  margin-left: 15px;
+  max-width: 10rem;
+  border-bottom: 0.8rem solid #F2F2F2; }
+
+.fordpats {
+  text-align: left; }
+
+.morefour {
+  display: block;
+  font-family: 'Open Sans', 'sans-serif';
+  font-weight: 400;
+  font-size: 1.8em;
+  padding-top: 0.6rem;
+  padding-bottom: 0.6rem;
+  border: 0.5rem solid #F2F2F2;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  margin-left: 15px;
+  text-align: center;
+  width: 11em;
+  transition: .2s; }
+
+.morefour:hover {
+  background-color: #F2F2F2;
+  color: #ED1C24; }
+
+.brandlinks2 {
+  color: #F2F2F2;
+  font-weight: 600; }

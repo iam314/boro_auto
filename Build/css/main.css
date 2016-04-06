@@ -1,0 +1,712 @@
+@charset "UTF-8";
+/*-----------------------------------*\
+  $TOAST-GRID
+  An insane grid.
+  You'd be mad to use it.
+  Usage
+  =====
+  Assuming default values:
+  <div class="grid">
+    <div class="grid__col grid__col--1-of-2">
+      A half-width column.
+    </div>
+    <div class="grid__col grid__col--1-of-4 grid__col--pull-1-of-4">
+      A quarter, pulled left by its own width. You get this, right?
+    </div>
+  </div>
+  Customisation
+  =============
+  $toast-grid-namespace and $toast-grid-column-namespace
+  adjusts the class names for the grid. With
+  default values, grid wrappers have a class
+  of '.grid' and columns '.grid__col'.
+  $toast-col-groups(n) adjusts column divisions.
+  For example, $toast-col-groups(12) will produce
+  a 12-column grid. $col-groups(3,6,8)
+  will produce a 3-, 6-, and 8-column grid.
+  $toast-gutter-width is—you guessed it—the gutter
+  width. Accepts any unit.
+  That's it. Have fun.
+\*-----------------------------------*/
+.row {
+  list-style: none;
+  margin-left: -20px; }
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 0;
+  padding-right: 0; }
+
+.container:before, .container:after {
+  content: " ";
+  display: table; }
+
+.container:after {
+  clear: both; }
+
+@media (min-width: 768px) {
+  .container {
+    width: 755px; } }
+@media (min-width: 852px) {
+  .container {
+    width: 845px; } }
+@media (min-width: 992px) {
+  .container {
+    width: 985px; } }
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px; } }
+.container-fluid {
+  margin-right: auto;
+  margin-left: auto; }
+
+.container-fluid:before, .container-fluid:after {
+  content: " ";
+  display: table; }
+
+.container-fluid:after {
+  clear: both; }
+
+.col--2-of-2, .col--3-of-3, .col--4-of-4, .col--5-of-5, .col--6-of-6, .col--8-of-8, .col--12-of-12 {
+  width: 100%; }
+
+.col--1-of-2, .col--2-of-4, .col--3-of-6, .col--4-of-8, .col--6-of-12 {
+  width: 50%; }
+
+.col--1-of-3, .col--2-of-6, .col--4-of-12 {
+  width: 33.33333%; }
+
+.col--2-of-3, .col--4-of-6, .col--8-of-12 {
+  width: 66.66667%; }
+
+.col--1-of-4, .col--2-of-8, .col--3-of-12 {
+  width: 25%; }
+
+.col--3-of-4, .col--6-of-8, .col--9-of-12 {
+  width: 75%; }
+
+.col--push-2-of-2, .col--push-3-of-3, .col--push-4-of-4, .col--push-5-of-5, .col--push-6-of-6, .col--push-8-of-8, .col--push-12-of-12 {
+  margin-left: 100%; }
+
+.col--push-1-of-2, .col--push-2-of-4, .col--push-3-of-6, .col--push-4-of-8, .col--push-6-of-12 {
+  margin-left: 50%; }
+
+.col--push-1-of-3, .col--push-2-of-6, .col--push-4-of-12 {
+  margin-left: 33.33333%; }
+
+.col--push-2-of-3, .col--push-4-of-6, .col--push-8-of-12 {
+  margin-left: 66.66667%; }
+
+.col--push-1-of-4, .col--push-2-of-8, .col--push-3-of-12 {
+  margin-left: 25%; }
+
+.col--push-3-of-4, .col--push-6-of-8, .col--push-9-of-12 {
+  margin-left: 75%; }
+
+.col--pull-2-of-2, .col--pull-3-of-3, .col--pull-4-of-4, .col--pull-5-of-5, .col--pull-6-of-6, .col--pull-8-of-8, .col--pull-12-of-12 {
+  margin-left: -100%; }
+
+.col--pull-1-of-2, .col--pull-2-of-4, .col--pull-3-of-6, .col--pull-4-of-8, .col--pull-6-of-12 {
+  margin-left: -50%; }
+
+.col--pull-1-of-3, .col--pull-2-of-6, .col--pull-4-of-12 {
+  margin-left: -33.33333%; }
+
+.col--pull-2-of-3, .col--pull-4-of-6, .col--pull-8-of-12 {
+  margin-left: -66.66667%; }
+
+.col--pull-1-of-4, .col--pull-2-of-8, .col--pull-3-of-12 {
+  margin-left: -25%; }
+
+.col--pull-3-of-4, .col--pull-6-of-8, .col--pull-9-of-12 {
+  margin-left: -75%; }
+
+.col--1-of-5 {
+  width: 20%; }
+
+.col--push-1-of-5 {
+  margin-left: 20%; }
+
+.col--pull-1-of-5 {
+  margin-left: -20%; }
+
+.col--2-of-5 {
+  width: 40%; }
+
+.col--push-2-of-5 {
+  margin-left: 40%; }
+
+.col--pull-2-of-5 {
+  margin-left: -40%; }
+
+.col--3-of-5 {
+  width: 60%; }
+
+.col--push-3-of-5 {
+  margin-left: 60%; }
+
+.col--pull-3-of-5 {
+  margin-left: -60%; }
+
+.col--4-of-5 {
+  width: 80%; }
+
+.col--push-4-of-5 {
+  margin-left: 80%; }
+
+.col--pull-4-of-5 {
+  margin-left: -80%; }
+
+.col--1-of-6 {
+  width: 16.66667%; }
+
+.col--push-1-of-6 {
+  margin-left: 16.66667%; }
+
+.col--pull-1-of-6 {
+  margin-left: -16.66667%; }
+
+.col--5-of-6 {
+  width: 83.33333%; }
+
+.col--push-5-of-6 {
+  margin-left: 83.33333%; }
+
+.col--pull-5-of-6 {
+  margin-left: -83.33333%; }
+
+.col--1-of-8 {
+  width: 12.5%; }
+
+.col--push-1-of-8 {
+  margin-left: 12.5%; }
+
+.col--pull-1-of-8 {
+  margin-left: -12.5%; }
+
+.col--3-of-8 {
+  width: 37.5%; }
+
+.col--push-3-of-8 {
+  margin-left: 37.5%; }
+
+.col--pull-3-of-8 {
+  margin-left: -37.5%; }
+
+.col--5-of-8 {
+  width: 62.5%; }
+
+.col--push-5-of-8 {
+  margin-left: 62.5%; }
+
+.col--pull-5-of-8 {
+  margin-left: -62.5%; }
+
+.col--7-of-8 {
+  width: 87.5%; }
+
+.col--push-7-of-8 {
+  margin-left: 87.5%; }
+
+.col--pull-7-of-8 {
+  margin-left: -87.5%; }
+
+.col--1-of-12 {
+  width: 8.33333%; }
+
+.col--push-1-of-12 {
+  margin-left: 8.33333%; }
+
+.col--pull-1-of-12 {
+  margin-left: -8.33333%; }
+
+.col--2-of-12 {
+  width: 16.66667%; }
+
+.col--push-2-of-12 {
+  margin-left: 16.66667%; }
+
+.col--pull-2-of-12 {
+  margin-left: -16.66667%; }
+
+.col--5-of-12 {
+  width: 41.66667%; }
+
+.col--push-5-of-12 {
+  margin-left: 41.66667%; }
+
+.col--pull-5-of-12 {
+  margin-left: -41.66667%; }
+
+.col--7-of-12 {
+  width: 58.33333%; }
+
+.col--push-7-of-12 {
+  margin-left: 58.33333%; }
+
+.col--pull-7-of-12 {
+  margin-left: -58.33333%; }
+
+.col--10-of-12 {
+  width: 83.33333%; }
+
+.col--push-10-of-12 {
+  margin-left: 83.33333%; }
+
+.col--pull-10-of-12 {
+  margin-left: -83.33333%; }
+
+.col--11-of-12 {
+  width: 91.66667%; }
+
+.col--push-11-of-12 {
+  margin-left: 91.66667%; }
+
+.col--pull-11-of-12 {
+  margin-left: -91.66667%; }
+
+.col {
+  box-sizing: border-box;
+  display: inline-block;
+  margin-right: -.25em;
+  min-height: 1px;
+  padding-left: 20px;
+  vertical-align: top; }
+  @media (max-width: 700px) {
+    .col {
+      display: block;
+      margin-left: 0;
+      margin-right: 0;
+      width: auto; } }
+  @media (max-width: 700px) and (min-width: 480px) {
+    .col[class*="col--m-"] {
+      display: inline-block;
+      margin-right: -.24em; }
+    .col.col--m-1-of-2, .col.col--m-2-of-4 {
+      width: 50%; }
+    .col.col--m-1-of-3 {
+      width: 33.33333%; }
+    .col.col--m-2-of-3 {
+      width: 66.66667%; }
+    .col.col--m-1-of-4 {
+      width: 25%; }
+    .col.col--m-3-of-4 {
+      width: 75%; } }
+  @media (max-width: 480px) {
+    .col[class*="col--s-"] {
+      display: inline-block;
+      margin-right: -.24em; }
+    .col.col--s-1-of-2, .col.col--s-2-of-4 {
+      width: 50%; }
+    .col.col--s-1-of-3 {
+      width: 33.33333%; }
+    .col.col--s-2-of-3 {
+      width: 66.66667%; }
+    .col.col--s-1-of-4 {
+      width: 25%; }
+    .col.col--s-3-of-4 {
+      width: 75%; } }
+
+.col--centered {
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+
+.col--d-first {
+  float: left; }
+
+.col--d-last {
+  float: right; }
+
+.row--no-gutter {
+  margin-left: 0;
+  width: 100%; }
+  .row--no-gutter .col {
+    padding-left: 0; }
+  .row--no-gutter .col--span-all {
+    margin-left: 0;
+    width: 100%; }
+
+.col--ab {
+  vertical-align: bottom; }
+
+.col--am {
+  vertical-align: middle; }
+
+.bottomredline {
+  border-bottom: 1px solid #ED1C24; }
+
+.logo {
+  background-image: url(../img/logo.svg);
+  background-repeat: no-repeat;
+  height: 7.2em;
+  width: 8.7em;
+  float: left;
+  margin-top: 1.5em;
+  margin-bottom: 1.8em;
+  cursor: pointer; }
+
+.logo:hover {
+  background-image: url(../img/logo_hover.svg);
+  background-repeat: no-repeat;
+  height: 7.2em;
+  width: 8.7em;
+  -webkit-transform: .2s;
+  -moz-transform: .2s;
+  -ms-transform: .2s;
+  -o-transform: .2s;
+  transform: .2s; }
+
+.topnav {
+  margin-top: 6.1rem; }
+
+nav ul li {
+  display: inline; }
+
+ul {
+  margin-right: 2rem; }
+
+nav ul li a {
+  font-family: 'Open Sans', 'sans-serif';
+  font-weight: 600;
+  font-size: 1.8em;
+  color: #1A1A1A;
+  text-decoration: none; }
+
+nav ul li a:hover {
+  color: #ED1C24;
+  transition: .2s; }
+
+nav li.current a {
+  color: #ED1C24; }
+
+li a::after {
+  content: " | "; }
+
+li:last-child > a:after {
+  content: ""; }
+
+.leftbox {
+  display: flex;
+  justify-content: flex-end; }
+
+.topaddress {
+  border-left: 1px solid #ED1C24;
+  padding-left: 1.2rem;
+  margin-top: 1.4rem; }
+  .topaddress a {
+    font-family: 'Open Sans', 'sans-serif';
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.6rem;
+    line-height: 150%;
+    color: #666666;
+    text-decoration: none; }
+  .topaddress a:hover {
+    color: #ED1C24; }
+
+@media (max-width: 768px) {
+  .topaddress {
+    margin-right: 15px; }
+
+  .logo {
+    margin-left: 15px; }
+
+  .logos {
+    display: none; } }
+@media (max-width: 673px) {
+  .topaddress {
+    display: none; } }
+@media (max-width: 433px) {
+  .logo {
+    display: flex;
+    float: none;
+    margin: 1.5em auto 0 auto; }
+
+  .topnav {
+    margin-top: 1.5em; }
+
+  nav ul li a {
+    font-size: 1.6em; }
+
+  .leftbox {
+    display: flex;
+    justify-content: center; } }
+footer {
+  background-color: #F2F2F2;
+  margin-top: 3em; }
+
+.moveup {
+  position: absolute;
+  max-width: 1280px; }
+
+.footer_navigation ul li {
+  display: inline-block; }
+
+.footer_navigation ul {
+  padding: 0;
+  text-align: center;
+  margin-top: 2.5em; }
+
+.footer_navigation ul li a {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  font-size: 1.8em;
+  color: #1A1A1A;
+  text-align: center;
+  text-decoration: none; }
+
+.footer_navigation ul li a:hover {
+  color: #ED1C24; }
+
+.footer_navigation li.current a {
+  color: #ED1C24; }
+
+.centerbox {
+  display: flex;
+  justify-content: center; }
+
+.addressbottom {
+  text-align: center;
+  margin-bottom: 1.8rem; }
+  .addressbottom a {
+    font-family: 'Open Sans', 'sans-serif';
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.6rem;
+    line-height: 130%;
+    color: #666666;
+    text-decoration: none; }
+  .addressbottom a:hover {
+    color: #ED1C24; }
+
+html {
+  font-size: 62.5%;
+  font-family: 'Open Sans', sans-serif;
+  box-sizing: border-box; }
+
+body {
+  font-size: 99%;
+  background-color: white;
+  margin: 0; }
+
+::selection {
+  background: #ED1C24;
+  color: white;
+  text-shadow: none; }
+
+.img-responsive {
+  display: block;
+  max-width: 100%;
+  height: auto; }
+
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+
+.slogans {
+  padding-top: 120px; }
+
+h2 {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 1em;
+  font-family: 'Open Sans', 'sans-serif';
+  font-weight: 700;
+  font-size: 2.1em;
+  color: #F2F2F2; }
+
+.orange {
+  width: 400px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #F7941E; }
+
+.red {
+  width: 310px;
+  padding-top: 5px;
+  padding-bottom: 15px;
+  background-color: #ED1C24; }
+
+.partsimage {
+  background-image: url(../img/autoparts.jpg);
+  height: 550px;
+  margin-bottom: 0.8em;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%; }
+
+.branddescription {
+  font-family: 'Open Sans', 'sans-serif';
+  font-weight: 400;
+  font-size: 1.8em;
+  line-height: 160%;
+  text-align: center;
+  color: #1A1A1A;
+  margin: 0 auto;
+  padding: 3.6rem 1.5rem 4.4rem 1.5rem; }
+
+.logos {
+  display: flex;
+  justify-content: space-between; }
+
+.logos_two_row1 {
+  display: none; }
+
+.logos_two_row2 {
+  display: none; }
+
+a.branding:hover {
+  -webkit-filter: grayscale(1);
+  -moz-filter: grayscale(1);
+  -ms-filter: grayscale(1);
+  -o-filter: grayscale(1);
+  filter: grayscale(1); }
+
+.brandlinks, .brandlinks:visited {
+  color: #ED1C24;
+  text-decoration: none;
+  transition: .2s; }
+
+.brandlinks:hover {
+  color: #c61017; }
+
+.moreone {
+  display: block;
+  font-family: 'Open Sans', 'sans-serif';
+  font-weight: 400;
+  font-size: 1.8em;
+  background-color: #ED1C24;
+  padding-top: 0.6rem;
+  padding-bottom: 0.6rem;
+  border: 0.5rem solid #ED1C24;
+  color: #F2F2F2;
+  text-decoration: none;
+  cursor: pointer;
+  margin: 0 auto;
+  text-align: center;
+  width: 7em;
+  transition: .2s; }
+
+.moreone:hover {
+  background-color: #c61017;
+  color: #F2F2F2;
+  border: 0.5rem solid #c61017; }
+
+.backgroundblue {
+  background-color: #3C5BDD; }
+
+.fordpats {
+  font-family: 'Open Sans', 'sans-serif';
+  font-weight: 400;
+  font-size: 1.8em;
+  line-height: 160%;
+  text-align: center;
+  color: #F2F2F2;
+  margin: 0 auto;
+  padding: 3.6rem 1.5rem 2.6rem 1.5rem; }
+
+.moretwo {
+  display: block;
+  font-family: 'Open Sans', 'sans-serif';
+  font-weight: 400;
+  font-size: 1.8em;
+  padding-top: 0.6rem;
+  padding-bottom: 0.6rem;
+  border: 0.5rem solid #F2F2F2;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  margin: 0 auto;
+  text-align: center;
+  width: 7em;
+  transition: .2s; }
+
+.moretwo:hover {
+  background-color: #F2F2F2;
+  color: #3C5BDD; }
+
+.fordspace {
+  height: 3.6em; }
+
+h1 {
+  font-family: 'Open Sans', 'sans-serif';
+  font-weight: 400;
+  font-size: 2.6em;
+  line-height: 125%;
+  margin-bottom: 2em;
+  color: #1A1A1A;
+  text-align: center; }
+
+@media (max-width: 967px) {
+  .partsimage {
+    height: 450px; }
+
+  .slogans {
+    top: 190px; } }
+@media (max-width: 847px) {
+  .partsimage {
+    height: 400px; }
+
+  .logos {
+    display: none; }
+
+  .logos_two_row1 {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 3em; }
+
+  .logos_two_row2 {
+    display: flex;
+    justify-content: space-around; } }
+@media (max-width: 673px) {
+  h1 {
+    font-size: 2.4em; }
+
+  h2 {
+    font-size: 1.7em; }
+
+  .slogans {
+    padding-top: 60px; }
+
+  .orange {
+    width: 288px; }
+
+  .red {
+    width: 250px; }
+
+  .partsimage {
+    height: 350px; }
+
+  .logo {
+    height: 7.2em;
+    width: 8.7em; }
+
+  .logo:hover {
+    height: 7.2em;
+    width: 8.7em; }
+
+  .logos_two_row1, .logos_two_row2 {
+    display: block;
+    padding-left: 70px;
+    padding-right: 70px; }
+
+  .dln {
+    margin-bottom: 4em; }
+
+  .branddescription {
+    padding-top: 1rem; }
+
+  #map-canvas {
+    height: 30em; } }
+@media (max-width: 433px) {
+  .logo {
+    height: 5em;
+    width: 6.5em; }
+
+  .logo:hover {
+    height: 5em;
+    width: 6.5em; } }

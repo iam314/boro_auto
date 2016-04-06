@@ -1,0 +1,51 @@
+@import "variables";
+
+.backgroundred {
+  background-color: $color-red;
+}
+
+h1 {
+  color: $color-lightgray;
+  margin-top: 0;
+  padding-top: 5rem;
+  padding-left: 15px;
+  text-align: left;
+  margin-bottom: 2rem;
+}
+
+.underline {
+  margin-left: 15px;
+  max-width: 10rem;
+  border-bottom: 0.8rem solid $color-lightgray;
+}
+
+.fordpats {
+  text-align: left;
+}
+
+.morefour {
+  display: block;
+  font-family: 'Open Sans', 'sans-serif';
+  font-weight: 400;
+  font-size: 1.8em;
+	padding-top: 0.6rem;
+	padding-bottom: 0.6rem;
+  border: 0.5rem solid $color-lightgray;
+	color: white;
+  text-decoration: none;
+	cursor: pointer;
+	margin-left: 15px;
+	text-align: center;
+	width: 11em;
+  transition: .2s;
+}
+
+.morefour:hover {
+	background-color: $color_lightgray;
+	color: $color_red;
+}
+
+.brandlinks2 {
+  color: $color-lightgray;
+  font-weight: 600;
+}

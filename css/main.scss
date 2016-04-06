@@ -1,0 +1,286 @@
+// Custom variables
+@import "variables";
+@import "grid";
+@import "header";
+@import "footer";
+
+// * {
+//   -webkit-transition: .5s;
+//   -moz-transition: .5s;
+//   -ms-transition: .5s;
+//   -o-transition: .5s;
+//   transition: .5s;
+// }
+
+html {
+  font-size: 62.5%;
+  font-family: 'Open Sans', sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+	font-size:99%;
+  background-color: white;
+  margin: 0;
+}
+
+::selection {
+    background: $color-red;
+    color: white;
+    text-shadow: none;
+ }
+
+ .img-responsive {
+   display: block;
+   max-width: 100%;
+   height: auto; }
+
+ .center-block {
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+   }
+
+////////////////////////////////////////////////////////////////////////////////
+//SLOGAN
+////////////////////////////////////////////////////////////////////////////////
+.slogans {
+  padding-top: 120px;
+}
+
+h2 {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 1em;
+  font-family: 'Open Sans', 'sans-serif';
+  font-weight: 700;
+  font-size: 2.1em;
+  color: $color_lightgray;
+}
+
+.orange {
+  width: 400px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: $color-orange;
+}
+
+.red {
+  width: 310px;
+  padding-top: 5px;
+  padding-bottom: 15px;
+  background-color: $color-red;
+}
+
+.partsimage {
+  background-image: url(img/autoparts.jpg);
+  height: 550px;
+  margin-bottom: 0.8em;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+}
+////////////////////////////////////////////////////////////////////////////////
+//BRANDS
+////////////////////////////////////////////////////////////////////////////////
+.branddescription {
+    font-family: 'Open Sans', 'sans-serif';
+  	font-weight: 400;
+    font-size: 1.8em;
+    line-height: 160%;
+    text-align: center;
+    color: $color-black;
+    margin:0 auto;
+    padding: 3.6rem 1.5rem 4.4rem 1.5rem;
+}
+
+.logos {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logos_two_row1 {
+  display: none;
+}
+
+.logos_two_row2 {
+  display: none;
+}
+
+a.branding:hover {
+  -webkit-filter: grayscale(1);
+  -moz-filter: grayscale(1);
+  -ms-filter: grayscale(1);
+  -o-filter: grayscale(1);
+  filter: grayscale(1);
+}
+
+.brandlinks, .brandlinks:visited {
+  color: $color-red;
+  text-decoration: none;
+  transition: .2s;
+}
+
+.brandlinks:hover {
+  color: darken( $color-red, 10% );
+}
+
+.moreone {
+  display: block;
+  font-family: 'Open Sans', 'sans-serif';
+  font-weight: 400;
+  font-size: 1.8em;
+	background-color: $color-red;
+	padding-top: 0.6rem;
+	padding-bottom: 0.6rem;
+  border: 0.5rem solid $color-red;
+	color: $color-lightgray;
+  text-decoration: none;
+	cursor: pointer;
+	margin: 0 auto;
+	text-align: center;
+	width: 7em;
+  transition: .2s;
+}
+
+.moreone:hover {
+	background-color: darken( $color-red, 10% );
+	color: $color_lightgray;
+  border: 0.5rem solid darken( $color-red, 10% );
+}
+
+////////////////////////////////////////////////////////////////////////////////
+//FORD PARTS
+////////////////////////////////////////////////////////////////////////////////
+.backgroundblue {
+  background-color: $color-blue;
+}
+
+.fordpats {
+  font-family: 'Open Sans', 'sans-serif';
+	font-weight: 400;
+  font-size: 1.8em;
+  line-height: 160%;
+  text-align: center;
+  color: $color-lightgray;
+  margin:0 auto;
+  padding: 3.6rem 1.5rem 2.6rem 1.5rem;
+}
+
+.moretwo {
+  display: block;
+  font-family: 'Open Sans', 'sans-serif';
+  font-weight: 400;
+  font-size: 1.8em;
+	padding-top: 0.6rem;
+	padding-bottom: 0.6rem;
+  border: 0.5rem solid $color-lightgray;
+	color: white;
+  text-decoration: none;
+	cursor: pointer;
+	margin: 0 auto;
+	text-align: center;
+	width: 7em;
+  transition: .2s;
+}
+
+.moretwo:hover {
+	background-color: $color_lightgray;
+	color: $color_blue;
+}
+
+.fordspace {
+  height: 3.6em;
+}
+
+h1 {
+  font-family: 'Open Sans', 'sans-serif';
+  font-weight: 400;
+  font-size: 2.6em;
+  line-height: 125%;
+  margin-bottom: 2em;
+	color: $color-black;
+  text-align: center;
+}
+
+@media (max-width: 967px) {
+  .partsimage {
+    height: 450px;
+  }
+  .slogans {
+    top: 190px;
+  }
+}
+@media (max-width: 847px) {
+  .partsimage {
+    height: 400px;
+  }
+  .logos {
+    display: none;
+  }
+  .logos_two_row1 {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 3em;
+  }
+  .logos_two_row2 {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+@media (max-width: 673px) {
+  h1 {
+    font-size: 2.4em;
+  }
+
+  h2 {
+    font-size: 1.7em;
+  }
+  .slogans {
+    padding-top: 60px;
+  }
+  .orange {
+    width: 288px;
+  }
+  .red {
+    width: 250px;
+  }
+  .partsimage {
+    height: 350px;
+  }
+  .logo {
+    height: 7.2em;
+    width: 8.7em;
+  }
+  .logo:hover {
+    height: 7.2em;
+    width: 8.7em;
+  }
+  .logos_two_row1, .logos_two_row2 {
+    display: block;
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+  .dln {
+    margin-bottom: 4em;
+  }
+  .branddescription {
+    padding-top: 1rem;
+  }
+  #map-canvas {
+    height: 30em;
+  }
+}
+
+@media (max-width: 433px) {
+  .logo {
+    height: 5em;
+    width: 6.5em;
+  }
+  .logo:hover {
+    height: 5em;
+    width: 6.5em;
+  }
+}
